@@ -1,0 +1,431 @@
+@import 'styles/reset';
+@import 'styles/variables';
+@import 'styles/mixin';
+@import 'styles/fonts';
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-variation-settings: 'wght' 300;
+}
+
+.container {
+  width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.head {
+  background-image: url('images/header.png');
+  background-repeat: no-repeat;
+  height: 700px;
+  &-up{
+    border: 1px solid white;
+    border-radius: 40px;
+    padding: 5px;
+  }
+  &-sign {
+    font-size: 14px;
+  }
+  &-dream {
+    width: 470px;
+    font-size: 52px;
+    margin: auto;
+    margin-bottom: 28.5px;
+  }
+  &-detail {
+    padding: 46px 308px 0 248px;
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-topic {
+    color: $white;
+    text-align: center;
+    margin-top: 154px;
+  }
+  &-text {
+    font-size: 24px;
+    margin-bottom: 45px;
+  }
+  &-button {
+    font-size: 14px;
+    color: $white;
+    background-color: #FF4E50;
+    border-radius: 40px;
+    padding: 10px;
+    border-color: #FF4E50;
+  }
+}
+
+.dreamshare {
+  width: 940px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+
+  &-topic {
+    font-size: 24px;
+    margin: 18px 0 10px;
+    color: $white;
+  }
+
+  &-text-small {
+    font-style: 14px;
+    color: #E3E3E3;
+  }
+
+  &-text {
+    text-align: center;
+    margin-top: 89px;
+  }
+  &-photo {
+    display: flex;
+    margin: 35px 0px 95px 0;
+  }
+  &-1 {
+    background-image: url('images/dreamshare1.png');
+    padding: 224px 0 0 39px;
+  }
+  &-2 {
+    background-image: url('images/deamshare2.png');
+    padding: 255px 0 0 37px;
+  }
+  &-3 {
+    background-image: url('images/dreamshare3.png');
+    padding: 224px 0 0 37px;
+  }
+  &-1, &-2, &-3 {
+    margin-right: 20px;
+    @include mane (300px, 400px);
+  }
+
+  &-button {
+    @extend .head-button;
+    font-size: 10px;
+    padding: 1px 15px;
+  }
+}
+.partner {
+  @include mane (939px, 205px);
+  margin: 0 auto;
+  margin-bottom: 55px;
+  display: flex;
+  text-align: center;
+  &-topic-big {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  &-left {
+    display: flex;
+    height: 38px;
+  }
+  &-right {
+    display: flex;
+    height: 57px;
+  }
+  &-1, &-2, &-3, &-4 {
+    margin-right: 19px;
+    width: 221px;
+  }
+  &-text {
+    font-size: 14px;
+    color: #666666;
+  }
+  &-topic {
+    font-size: 14px;
+    margin: 17px 0 12px;
+  }
+}
+
+.button {
+  color: #FF4E50;
+  border: 1px solid #FF4E50;
+  border-radius: 40px;
+  background-color: white;
+  padding: 10px;
+  width: 180px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 95px;
+}
+
+.activity {
+  width: 940px;
+  margin: 0 auto;
+  margin-bottom: 95px;
+  &-head {
+    display: flex;
+  }
+  &-middle {
+    display: flex;
+  }
+  &-foot {
+    display: flex;
+  }
+  &-topic {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 35px;
+  }
+}
+
+img[alt = "activity"] {
+  margin: 0 20px 20px 0;
+}
+
+.create {
+  text-align: center;
+  width: 481px;
+  margin: 0 auto;
+  &-topic {
+    font-size: 26px;
+  }
+  &-text {
+    font-size: 18px;
+    margin-top: 43px;
+    color: #666666
+    ;
+  }
+  &-enter {
+    display: flex;
+    margin: 25px 0 100px 0;
+  }
+  &-button {
+    color: $white;
+    background-color: #FF4E50;
+    border-radius: 40px;
+    padding: 10px;
+    text-align: center;
+    width: 172px;
+  }
+}
+
+input[type = "text"] {
+  width: 299px;
+  margin-right: 10px;
+}
+
+.foot {
+  width: 941px;
+  margin: 0 auto;
+  display: flex;
+  &-1 {
+    color: #FF4E50;
+    font-size: 16px;
+    margin-right: 122px;
+  }
+  &-2 {
+    font-size: 14px;
+    p {
+      color: #999999;
+      line-height: 26px;
+    }
+    h3 {
+      color: #444444;
+    }
+    margin-right: 169px;
+  }
+  &-3 {
+    color: #444444;
+    font-size: 14px;
+    margin-right: 317px;
+  }
+  &-4 {
+    font-size: 10px;
+    color: #CCCCCC;
+    h3 {
+      margin-bottom: 7px;
+    }
+  }
+}
+
+footer {
+  width: 1440px;
+  margin: 0 auto;
+  border-top: 2px solid #FF4E50;
+  padding-top: 36px;
+}
+
+@media screen and (max-width: 769px) {
+  .container {
+    width: 768px;
+  }
+
+  .head{
+    &-detail {
+      padding: 50px 67px 0 48px;
+    }
+  } 
+
+  .dreamshare {
+    width: 748px;
+    height: 100%;
+  }
+
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .partner {
+    @include mane (492px, 428px);
+  }
+
+  .button {
+    margin-bottom: 106px;
+  }
+
+  .activity {
+    width: 748px;
+  }
+
+  .small-photo {
+    @include mane (236px, 310px);
+  }
+
+  .big-photo {
+    @include mane (492px, 310px)
+  }
+
+  .foot {
+    width: 692px;
+    &-1 {
+      margin-right: 108px;
+    }
+    &-2 {
+      margin-right: 100px;
+    }
+    &-3 {
+      margin-right: 128px;
+    }
+  }
+
+  footer {
+    width: 768px;
+    padding-top: 19px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .container {
+    width: 320px;
+  }
+
+  .head {
+    height: 540px;
+    background-repeat: no-repeat;
+    &-detail {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+    }
+    &-sign {
+      margin-bottom: 95px;
+    }
+    &-dream {
+      width: 272px;
+      font-size: 30px;
+      margin-bottom: 5.5px;
+    }
+    &-topic {
+      margin-top: 26.5px;
+    }
+    &-text {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  }
+  .dreamshare {
+    width: 300px;
+    &-photo {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &-1, &-2, &-3 {
+      margin: 0 0 10px 0;
+      @include mane (300px, 240px);
+    }
+    &-text {
+      margin-top: 89px;
+    }
+    &-1 {
+      padding: 69px 0 0 30px;
+      margin-bottom: 10px;
+    }
+    &-2 {
+      padding: 100px 0 0 32px;
+      margin-bottom: 10px;
+    }
+    &-3 {
+      padding: 69px 0 0 32px;
+    }
+  }
+  .partner {
+    @include mane (236px, 868px);
+    display: flex;
+    flex-wrap: wrap;
+    &-1, &-3, &-left {
+      margin-bottom: 16px;
+    }
+  }
+
+  .activity {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .wrap-photo {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .small-photo, .big-photo {
+    @include mane (300px, 120px);
+  }
+
+  .create {
+    width: 300px;
+    margin: 0 auto;
+    &-text {
+      margin-top: 10px;
+    }
+    &-enter {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 10px 0 0px 0;
+    }
+    &-button {
+      width: 280px;
+      margin-bottom: 40px;
+      margin-top: 10px;
+    }
+  }
+
+  .foot {
+    width: 200px;
+    // margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
+    &-2 {
+      p{
+        margin-right: 10px;
+      }
+    }
+    &-1, &-2, &-3, &-4 {
+      margin-bottom: 10px;
+      margin: 0 auto;
+    }
+    &-3 {
+      width: 200px;
+    }
+  }
+
+  .d-flex {
+    display: flex;
+  }
+
+  footer {
+    width: 320px;
+  }
+}
